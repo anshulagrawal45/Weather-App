@@ -131,9 +131,15 @@
       const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
       let day = days[fulldate.getDay()];
       const daybox = document.getElementById("day");
-
       
-      daybox.innerText=`${day}, 0${dates}-0${month}-${year}`;
+      if(dates.length==1){
+        daybox.innerText=`${day}, 0${dates}-0${month}-${year}`;
+      }
+      else{
+        daybox.innerText=`${day}, ${dates}-0${month}-${year}`;
+      }
+      
+      
     </script>
   </body>
 </html>
